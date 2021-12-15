@@ -10,6 +10,7 @@
 <body>
 
     <div style="color:rgb(0, 0, 2)">
+        <container>
         <form action="{{ url_for('predict')}}" method="post">
             <h2>Stroke Prediction based on different Health Parameters</h2>
             
@@ -36,6 +37,7 @@
             <br><br><button id="sub" type="submit ">Predict</button>
             <br>
         </form>
+    </container>
         <br><br><h3 id="pred_text">{{ prediction_text }}<h3>
     </div>
 
