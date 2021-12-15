@@ -13,7 +13,7 @@
 
         <div class = "container" id = "container">
             <form action="{{ url_for('predict')}}" method="post">
-                <h2>Stroke Prediction based on different Health Parameters</h2>
+                <h2 id = "head">Stroke Prediction based on different Health Parameters</h2>
             
                 <h3>Age</h3><br><input id="first" name="Age" type="number ">
                 <h3>Gender (Male:0, Female: 1)</h3><br><input id="second" name="gender" required="required">
@@ -38,7 +38,7 @@
                 <br>
             </form>
         
-        <br><br><h3 id="pred_text">{{ prediction_text }}<h3>
+           <br><br><h3 id="pred_text">{{ prediction_text }}</h3>
         </div>
     </div>
 
@@ -111,16 +111,23 @@
         
         #sub {
             width: 120px;
-            height: 43px;
+            height: 40px;
             text-align: center;
             border-radius: 14px;
             font-size: 18px;
+            margin-bottom: 0.5px;
         }
         
         #sub:hover {
             background-color: rgb(139, 44, 0);
         }
         
+        #head{
+            height: 20px;
+            text-align: center;
+            font-size: x-large;
+            color: rgb(0, 0, 0);
+        }
         #first {
             border-radius: 14px;
             height: 25px;
@@ -173,10 +180,11 @@
             text-align: center;
         }
         #pred_text {
-            height: 20px;
+            height: 60px;
             text-align: center;
             font-size: larger;
-            color: darkgoldenrod;
+            bottom:auto;
+            color: rgb(0, 0, 0);
         }
     </style>
 </body>
