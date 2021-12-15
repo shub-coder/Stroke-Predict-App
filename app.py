@@ -68,9 +68,9 @@ def predict():
         #prediction = model.predict(data)
         output=round(prediction[0],2)
         if output==0:
-            return render_template('index.html',prediction_text="Good news for you!! You have maintained your health well. You Are pretty much safe from Stroke.")
+            return render_template('index.html',prediction_text="Congrats!! You have maintained your health well. You Are pretty much safe from Stroke.")
         elif output==1:
-            return render_template('index.html',prediction_text="As per your answers to all our questions you are at high risk of Stroke. Contact your Doctor immediately for accurate diagnosis and early treatment")
+            return render_template('index.html',prediction_text="As per your entered details, You have been diagnosed with high Stroke Risk. Consult a doctor immediately for accurate diagnosis and early treatment. Take Care :)")
     else:
         return render_template('index.html')
 
