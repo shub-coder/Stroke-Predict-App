@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stroke Prediction App</title>
+</head>
+
+<body>
+
+    <div style="color:rgb(0, 0, 2)">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Stroke Prediction based on different Health Parameters</h2>
+            
+            <h3>Age</h3><br><input id="first" name="Age" type="number ">
+            <h3>Gender (Male:0, Female: 1)</h3><br><input id="second" name="gender" required="required">
+            <h3>Do you have hypertension (high Blood Pressure: Yes:1, No:0)?</h3><input id="third" name="hypertension" required="required">
+            <h3>Do you previously have any Heart disease (Yes:1, No:0) ?</h3><br><input id="fourth" name="heart_disease" required="required">
+            <h3>Are you married ?(Yes:0, No:1)</h3><br><input id="fifth" name = "ever_married" required="required">
+                
+            <h3>What type of work do you do</h3><br><select name="work_type" id="select1" required="required">
+                <option value="Self-employed">Self-employed</option>
+                <option value="Private">Private</option>
+                <option value="Govt_job">Government Job</option>
+                <option value="children">Children</option>
+                <option value="Never_worked">Never worked</option>
+            </select>
+            <h3>Residence Type</h3><br><select name="Residence_type" id="select2" required="required">
+                <option value="Urban">Urban</option>
+                <option value="Rural">Rural</option>
+            </select>
+            <h3>What is your average glucose level for last 3 months?</h3><br><input id="sixth" name = "avg_glucose_level" required="required">
+            <h3>What is your bmi?</h3><br><input id="seventh" name = "bmi" required="required">
+            <h3>Do you smoke?(formerly smoked:0, never smoked:1, smokes:2, Unknown:3})</h3><br><input id="eighth" name = "smoking_status" required="required">
+            <br><br><button id="sub" type="submit ">Predict</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: rgb(170, 212, 219);
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #select2 {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        
+        #select2 {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #select2:hover {
+            background-color: coral;
+        }
+        
+        #select1 {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #select1:hover {
+            background-color: coral;
+        }
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: rgb(139, 44, 0);
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 25px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #fifth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #sixth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #seventh {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #eighth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
+
