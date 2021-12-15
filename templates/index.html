@@ -35,15 +35,8 @@
             <h3>Do you smoke?(formerly smoked:0, never smoked:1, smokes:2, Unknown:3})</h3><br><input id="eighth" name = "smoking_status" required="required">
             <br><br><button id="sub" type="submit ">Predict</button>
             <br>
-
-
-
-
         </form>
-
-
-
-        <br><br><h3>{{ prediction_text }}<h3>
+        <br><br><h3 id="pred_text">{{ prediction_text }}<h3>
     </div>
 
 
@@ -168,6 +161,12 @@
             height: 25px;
             font-size: 20px;
             text-align: center;
+        }
+        #pred_text {
+            height: 20px;
+            text-align: center;
+            font-size: larger;
+            color: darkgoldenrod;
         }
     </style>
 </body>
