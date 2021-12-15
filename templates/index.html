@@ -10,47 +10,55 @@
 <body>
 
     <div style="color:rgb(0, 0, 2)">
-        <container>
-        <form action="{{ url_for('predict')}}" method="post">
-            <h2>Stroke Prediction based on different Health Parameters</h2>
+
+        <div class = "container" id = "container">
+            <form action="{{ url_for('predict')}}" method="post">
+                <h2>Stroke Prediction based on different Health Parameters</h2>
             
-            <h3>Age</h3><br><input id="first" name="Age" type="number ">
-            <h3>Gender (Male:0, Female: 1)</h3><br><input id="second" name="gender" required="required">
-            <h3>Do you have hypertension (high Blood Pressure: Yes:1, No:0)?</h3><input id="third" name="hypertension" required="required">
-            <h3>Do you previously have any Heart disease (Yes:1, No:0) ?</h3><br><input id="fourth" name="heart_disease" required="required">
-            <h3>Are you married ?(Yes:0, No:1)</h3><br><input id="fifth" name = "ever_married" required="required">
-                
-            <h3>What type of work do you do</h3><br><select name="work_type" id="select1" required="required">
+                <h3>Age</h3><br><input id="first" name="Age" type="number ">
+                <h3>Gender (Male:0, Female: 1)</h3><br><input id="second" name="gender" required="required">
+                <h3>Do you have hypertension (high Blood Pressure: Yes:1, No:0)?</h3><input id="third" name="hypertension" required="required">
+                <h3>Do you previously have any Heart disease (Yes:1, No:0) ?</h3><br><input id="fourth" name="heart_disease" required="required">
+                <h3>Are you married ?(Yes:0, No:1)</h3><br><input id="fifth" name = "ever_married" required="required">
+                <h3>What type of work do you do</h3><br><select name="work_type" id="select1" required="required">
                 <option value="Self-employed">Self-employed</option>
                 <option value="Private">Private</option>
                 <option value="Govt_job">Government Job</option>
                 <option value="children">Children</option>
                 <option value="Never_worked">Never worked</option>
-            </select>
-            <h3>Residence Type</h3><br><select name="Residence_type" id="select2" required="required">
+                </select>
+                <h3>Residence Type</h3><br><select name="Residence_type" id="select2" required="required">
                 <option value="Urban">Urban</option>
                 <option value="Rural">Rural</option>
-            </select>
-            <h3>What is your average glucose level for last 3 months?</h3><br><input id="sixth" name = "avg_glucose_level" required="required">
-            <h3>What is your bmi?</h3><br><input id="seventh" name = "bmi" required="required">
-            <h3>Do you smoke?(formerly smoked:0, never smoked:1, smokes:2, Unknown:3})</h3><br><input id="eighth" name = "smoking_status" required="required">
-            <br><br><button id="sub" type="submit ">Predict</button>
-            <br>
-        </form>
-    </container>
+                </select>
+                <h3>What is your average glucose level for last 3 months?</h3><br><input id="sixth" name = "avg_glucose_level" required="required">
+                <h3>What is your bmi?</h3><br><input id="seventh" name = "bmi" required="required">
+                <h3>Do you smoke?(formerly smoked:0, never smoked:1, smokes:2, Unknown:3})</h3><br><input id="eighth" name = "smoking_status" required="required">
+                <br><br><button id="sub" type="submit ">Predict</button>
+                <br>
+            </form>
+        
         <br><br><h3 id="pred_text">{{ prediction_text }}<h3>
+        </div>
     </div>
 
 
 
 
     <style>
+
         body {
-            background-color: rgb(170, 212, 219);
+            background-color: rgb(245, 194, 127);
             text-align: center;
             padding: 0px;
         }
-        
+        .container {
+            background-color: rgb(185, 120, 120);
+            border-radius: 50px;
+            margin-right: 250px;
+            margin-left: 250px;
+            
+        }
         #select2 {
             font-size: 18px;
             width: 100px;
