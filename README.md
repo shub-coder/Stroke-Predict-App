@@ -4,7 +4,7 @@
 <img src="https://github.com/gprzy/stroke-prediction/blob/main/assets/stroke.jpeg" width="50%" height="50%"/>
 </div>
 
-* Demo of the web app can be found at - *
+* Demo of the web app can be found at - https://strokeprediction-app.herokuapp.com/*
 
 # Problem
  
