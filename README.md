@@ -16,5 +16,5 @@ This dataset is used to predict whether a patient is likely to get stroke based 
 The problem can be approached as a binary classification task, in which the main objective is to correctly classify patients who are most likely to have a stroke. The data in question is unbalanced, making it difficult and inaccurate to use metrics such as accuracy. In this case, the metric chosen was the F1 score, as well as the ROC curve. From the metrics above, the equal error rate (EER) was calculated, as well as the optimal threshold to correctly classify the largest number of stroke patients as likely to have stroke (true positives).
 
 <div>
-<img src="https://github.com/gprzy/stroke-prediction/blob/main/img1.png" width="600" height="600"/>
+<img src="https://github.com/gprzy/stroke-prediction/blob/main/img1.png" width="1500" height="300"/>
 </div>
