@@ -1,7 +1,7 @@
 ## Stroke-Predict-App
 
 <div>
-<img src="https://github.com/shub-coder/Stroke-Predict-App/blob/main/images/stroke-img.png" width="400" height="400"/>
+<img src="https://github.com/shub-coder/Stroke-Predict-App/blob/main/images/stroke-img.jpg" width="400" height="400"/>
 </div>
 
 * Demo of the web app can be found at - https://strokeprediction-app.herokuapp.com/*
